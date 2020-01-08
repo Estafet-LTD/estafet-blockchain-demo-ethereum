@@ -1,0 +1,17 @@
+{
+  "config": {
+        "chainId": 4777,
+        "homesteadBlock": 0,
+        "eip150Block": 0,
+	"eip155Block": 0,
+        "eip158Block": 0
+    },
+  "alloc": {
+  	"0x8945eDCe628C3b584008c244c317E6eC8a725c80": {"balance": "888888888888888888888888"}
+  },
+  "difficulty" : "0x400",
+  "extraData"  : "",
+  "gasLimit"   : "0x7A1200",
+  "parentHash" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "timestamp"  : "0x00"
+}
