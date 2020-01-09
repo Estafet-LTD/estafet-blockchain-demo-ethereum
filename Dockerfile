@@ -11,9 +11,10 @@ FROM alpine:latest
 
 RUN apk add --no-cache ca-certificates
 COPY --from=builder /go-ethereum/build/bin/geth /usr/local/bin/
-COPY --from=builder /go-ethereum/estachain-start.sh /
-COPY --from=builder /go-ethereum/Estachain/genesis.json /Estachain/genesis.json
-COPY --from=builder /go-ethereum/keystore/ /
+#COPY --from=builder /go-ethereum/estachain-start.sh /
+#COPY --from=builder /go-ethereum/Estachain/genesis.json /Estachain/genesis.json
+#COPY --from=builder /go-ethereum/keystore/ /
+COPY --from=builder /go-ethereum /
 
 EXPOSE 8545 8546 8547 30303 30303/udp
 ENTRYPOINT ["/estachain-start.sh"]

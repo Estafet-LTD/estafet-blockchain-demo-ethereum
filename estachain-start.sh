@@ -17,7 +17,7 @@ $ESTACHAIN --datadir $DATADIR init $GENESIS
 
 # start the node with the keystore and nodekey
 echo "Estachain START"
-$ESTACHAIN --rpc --rpcport $RPC_PORT --rpcapi "$RPC_API" --rpccorsdomain "*" --datadir $DATADIR --networkid 123 --nodiscover --keystore $KEYSTORE
+$ESTACHAIN --rpc --rpcport $RPC_PORT --rpcapi "$RPC_API" --rpcaddr $RPC_ADDR --rpccorsdomain "*" --datadir $DATADIR --networkid 123 --nodiscover --keystore $KEYSTORE
   #--syncmode "full" \
   #--mine \
   #--miner.threads 1 \
