@@ -6,13 +6,14 @@ RUN apk add --no-cache make gcc musl-dev linux-headers git
 ADD . /go-ethereum
 RUN cd /go-ethereum && make geth
 
-RUN ls /go-ethereum
-
 # Pull Geth into a second stage deploy alpine container
 FROM alpine:latest
 
 RUN apk add --no-cache ca-certificates
 COPY --from=builder /go-ethereum/build/bin/geth /usr/local/bin/
+COPY --from=builder /go-ethereum/estachain-start.sh /
+COPY --from=builder /go-ethereum/Estachain/genesis.json /Estachain/genesis.json
+COPY --from=builder /go-ethereum/keystore/ /
 
 EXPOSE 8545 8546 8547 30303 30303/udp
 ENTRYPOINT ["/estachain-start.sh"]
