@@ -10,6 +10,7 @@ RUN cd /go-ethereum && make geth
 FROM alpine:latest
 
 RUN apk add --no-cache ca-certificates
+RUN apk --no-cache add curl
 COPY --from=builder /go-ethereum/build/bin/geth /usr/local/bin/
 #COPY --from=builder /go-ethereum/estachain-start.sh /
 #COPY --from=builder /go-ethereum/Estachain/genesis.json /Estachain/genesis.json
