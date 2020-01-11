@@ -10,7 +10,7 @@ RPC_PORT=8545
 RPC_ADDR=$(awk 'END{print $1}' /etc/hosts)
 #RPC_ADDR=127.0.0.1
 RPC_API="istanbul,clique,console,eth,web3,admin,debug,miner,personal,txpool,net"
-RPC_VHOST=go-ethereum-blockchain-demo-dq04.3.10.158.121.xip.io
+#RPC_VHOST=go-ethereum-blockchain-demo-dq04.3.10.158.121.xip.io
 
 # init the data directory
 echo "Estachain INIT $RPC_ADDR"
