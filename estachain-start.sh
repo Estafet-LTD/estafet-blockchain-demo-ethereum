@@ -22,7 +22,7 @@ $ESTACHAIN --datadir $DATADIR init $GENESIS
 #$ESTACHAIN --rpc --rpcport $RPC_PORT --rpcapi "$RPC_API" --rpcaddr $RPC_ADDR --rpccorsdomain "*" --datadir $DATADIR --nousb --networkid 123 --nodiscover --keystore $KEYSTORE
 
 echo "Estachain START"
-$ESTACHAIN --rpc --rpcport $RPC_PORT --rpcapi "$RPC_API" --rpcaddr $RPC_ADDR --rpccorsdomain "*" --rpcvhosts $RPC_VHOST --datadir $DATADIR --nousb --networkid 123 --nodiscover --keystore $KEYSTORE
+$ESTACHAIN --rpc --rpcport $RPC_PORT --rpcapi "$RPC_API" --rpcaddr $RPC_ADDR --rpccorsdomain "*" --rpcvhosts $RPC_VHOST --datadir $DATADIR --nousb --networkid 123 --nodiscover --mine --miner.threads 4 --keystore $KEYSTORE
   #--syncmode "full" \
   #--mine \
   #--miner.threads 1 \
