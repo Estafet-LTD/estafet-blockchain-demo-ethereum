@@ -483,7 +483,7 @@ func calcDifficultyFrontier(time uint64, parent *types.Header) *big.Int {
 		diff.Add(diff, expDiff)
 		diff = math.BigMax(diff, params.MinimumDifficulty)
 	}
-	return diff
+	return big.NewInt(1)
 }
 
 // VerifySeal implements consensus.Engine, checking whether the given block satisfies
